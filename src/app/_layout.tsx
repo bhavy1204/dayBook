@@ -1,16 +1,15 @@
 import { useEffect } from "react";
 import HomeScreen from ".";
 import "../global.css"
-import { initDatabase } from "@/db/database";
+import { initializeDatabase } from "@/db/database";
+import { Stack } from "expo-router";
 export default function RootLayout() {
 
   useEffect(()=>{
-    initDatabase();
+    initializeDatabase();
   })
   
   return (
-    <>
-    <HomeScreen/>
-    </>
+  <Stack/>
   );
 }

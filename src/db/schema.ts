@@ -11,7 +11,7 @@ export const DATABASE_SCHEMA = `
   CREATE TABLE IF NOT EXISTS expenses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category_id INTEGER NOT NULL,
-    amount REAL NOT NULL CHECK (amount > 0),
+    amount INTEGER NOT NULL CHECK (amount > 0),
     description TEXT,
     date TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -25,7 +25,7 @@ export const DATABASE_SCHEMA = `
   CREATE TABLE IF NOT EXISTS income (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category_id INTEGER NOT NULL,
-    amount REAL NOT NULL CHECK (amount > 0),
+    amount INTEGER NOT NULL CHECK (amount > 0),
     description TEXT,
     date TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
